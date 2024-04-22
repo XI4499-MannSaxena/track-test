@@ -1,16 +1,19 @@
-slug: container-ubuntu
-id: fzzc5ut9k9da
-title: Sandbox container
+slug: container-ubuntu-dev
+id: llc2chdtj5sx
+title: DEV - Sandbox container
 teaser: Get started quickly with a single container-based sandbox host
 description: Get started quickly with a container-based sandbox host. Choose a container
   when you need a fast, lightweight Linux system.
 icon: https://cdn.instruqt.com/assets/templates/ubuntu.png
-tags: 
+tags:
+- dev
 - skip-ci
 owner: instruqt-support
 developers:
 - mann@instruqt.com
+maintenance: true
 idle_timeout: 1200
+timelimit: 1200
 lab_config:
   overlay: false
   width: 33
@@ -20,4 +23,4 @@ lab_config:
   feedback_recap_enabled: false
   feedback_tab_enabled: false
   loadingMessages: true
-checksum: "9768205154643912270"
+checksum: "6264037047583773025"
