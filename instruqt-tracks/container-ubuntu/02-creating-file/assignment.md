@@ -1,6 +1,6 @@
 ---
 slug: creating-file
-id: apn1f79dtm0c
+id: wwxetjx6sdxi
 type: challenge
 title: Creating a text file
 teaser: Learn how to create a text file
