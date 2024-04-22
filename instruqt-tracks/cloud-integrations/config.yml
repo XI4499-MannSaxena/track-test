@@ -1,0 +1,60 @@
+version: "3"
+containers:
+- name: cloud-client
+  image: gcr.io/instruqt/cloud-client
+  shell: /bin/bash
+  ports:
+  - 80
+  memory: 256
+virtualbrowsers:
+- name: aws
+  url: https://eu-north-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=hH66cuusr_NDlgScPWQBsuVZz_nzHHyyhmhAQvg8yEA&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_eu-north-1_4b19324fc76419e5&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEN3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiRzBFAiB39Y9Izz4zoSnRjWVLHBWBwPxmLFaB9Zr3uxyrdZziewIhAJGL8qvBpFtKOr2p0TwDd5TNpEE2gkRKUNtjFB5vxqDuKooCCBcQAhoMODAyNzcwMDY0NDczIgwkrPsb%2FFUdJEdxjDUq5wEsYJMngLU64VeXsgIF5zx6Ylfp0qP3bQgMMN3Yclo9A7EZ4Uv%2BxW1wexDb%2B%2BKaJcV8sMd8zJVdJyM%2B3%2F4l1zE0RyGiPTvQUHNid2i9W13m9r5vFxXCWPNONygdikNYKJUNWhT4Dasv6%2B8Ltln1ZwijWtbfLXWV5P3lln%2Btp85vSleCrmuOb%2BwXJXSebJZI%2B8LlmUhUBTSGCZMT4aNa%2FwR2pZuIt2vAZoHkexqOpJ0IXRmXZDTshZkyhu3upAQZJdGNC%2BDr4od3WIoe2GLeG3WuKsAKn8eahtaYA8zoLB35JgOnopWbr3QwzITVsAY6jwGeSypfEvqpIsbcAivDN%2BAlXX0U3pGAQRpu6cdEg%2BbOTDwyz48kB3N%2FrHvfVdxbWI6ldtA7K
+- name: gcp
+  url: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fcloud.google.com%2F_d%2Freturn%3Fcontinue%3Dhttps%253A%252F%252Fcloud.google.com%252Ffree&ifkv=ARZ0qKIwlq08HK8t8j-LB2fOlOhRgrHm_QeRUTaATwQY0SQVxuWpYozpX5kQNEm1GwbKtowWuLghHw&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-50304799%3A1712671568727236&theme=mn&ddm=0
+- name: azure
+  url: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?redirect_uri=https%3a%2f%2fportal.azure.com%2fsignin%2findex%2f&response_type=code+id_token&scope=https%3a%2f%2fmanagement.core.windows.net%2f%2fuser_impersonation+openid+email+profile&state=OpenIdConnect.AuthenticationProperties%3dPNDL8lzXuIt6Nj7RiNOOgsi79GsomZuJX7WKLgvnUjG9Co6MnZxP4iecRl8BdhSd9HRuoSMNAXRzVrSX1UfhymoVvP8AGbRu7FJ8MkOHXKo6mfaeCpZIrla2iqDQ5ypXeVksOrPmafbDG_0Vgh95vr0u812w7OHUqD_47hvpjb0BJllCwj1eMjRr3MajOx4DK8g6hmHsrz9YBkHzqUheoc5hNHCruC71Mw_Fv4xm44Ey9fTDu_Tc4vxXvlwEq-maA9CFSa8q-Ir8Rjfs1Uks6sH5_foa70sCIBgnfddwycKA_4aMKzwRmaTx7j5QXX_vvDWzx_6Fa3rXOP851TmH6p3r3ze-SNIe90NTokzNkqHd5Xhr6ORAxW583Zojbqlv7Gtsukp6RUkf2jk2fzghNeEAtqYprLftAi3wXMqhIBIt0MVmZlNObsC1j4iVgeMEk1Zv2DYFltkft3cpr1av5d68TyXPvmW3I1_za14nHgPawglXdiHJUZRZCrwzvlqvMiiOnNxx7DID1N_KU1aXFvg2tLWEpQ19YYZv-4wHug33jtgxGyIOvv5h74f_kfqO3NH8B6bEQQo9NjGLqGjOGA&response_mode=form_post&nonce=638482684258301579.M2NkMmFmOWYtY2I5NS00MDE4LWI2OTMtY2E5NDUxZWFiNzAxMGQ5MzRiNjctZmNjMC00ZGFiLWJhNDEtMDNmZTNjZmE3MzI1&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&prompt=select_account&client-request-id=302aca58-ddbc-487a-8460-ecac8a6ec6e3&x-client-SKU=ID_NET472&x-client-ver=7.2.0.0&sso_nonce=AwABEgEAAAACAOz_BQD0_4V7nTM3Bz7Lw0Kw_wwSRMHLo1WUMMUUk_iRX0l1cVk8iLQQAqH_IJLqKSJ36hfs0uOnZztIbFwujH3kYA6zl4wgAA&mscrid=302aca58-ddbc-487a-8460-ecac8a6ec6e3
+gcp_projects:
+- name: gcpaccount
+  services:
+  - compute.googleapis.com
+  - container.googleapis.com
+  roles:
+  - roles/compute.admin
+  - roles/container.admin
+aws_accounts:
+- name: awsaccount
+  iam_policy: |-
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+            "Sid":"EC2DefaultAllow",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        }
+      ]
+    }
+  scp_policy: |-
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "RequireNanoInstanceType",
+          "Effect": "Deny",
+          "Action": "ec2:RunInstances",
+          "Resource": [
+            "arn:aws:ec2:*:*:instance/*"
+          ],
+          "Condition": {
+            "StringNotEquals": {
+              "ec2:InstanceType": "t2.nano"
+            }
+          }
+        }
+      ]
+    }
+azure_subscriptions:
+- name: azureaccount
+  roles:
+  - Virtual Machine Contributor
